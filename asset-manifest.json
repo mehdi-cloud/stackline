@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/stackline/static/css/main.87a45b28.css",
+    "main.js": "/stackline/static/js/main.1ae24a91.js",
+    "static/js/453.e78d0c33.chunk.js": "/stackline/static/js/453.e78d0c33.chunk.js",
+    "static/media/shark_ninja.png": "/stackline/static/media/shark_ninja.2fd6fea830cad31d5643.png",
+    "index.html": "/stackline/index.html",
+    "main.87a45b28.css.map": "/stackline/static/css/main.87a45b28.css.map",
+    "main.1ae24a91.js.map": "/stackline/static/js/main.1ae24a91.js.map",
+    "453.e78d0c33.chunk.js.map": "/stackline/static/js/453.e78d0c33.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87a45b28.css",
+    "static/js/main.1ae24a91.js"
+  ]
+}
