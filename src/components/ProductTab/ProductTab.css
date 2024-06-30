@@ -1,0 +1,29 @@
+.tag {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+.tagContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.ProductTab {
+    background-color: #ffffff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.container {
+    justify-content: center;
+    margin-left: 1rem;
+}

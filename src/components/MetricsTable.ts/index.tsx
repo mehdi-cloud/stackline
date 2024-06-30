@@ -8,6 +8,7 @@ import Paper from '@mui/material/Paper';
 import { userReviews } from '../../userReviews';
 import { useEffect, useState } from 'react';
 import { formatDollarAmount, sale } from './util';
+import './MetricsTable.css'
 
 export default function MetricsTable() {
   const [sales, setSales] = useState<sale[]>();
@@ -17,31 +18,33 @@ export default function MetricsTable() {
   }, [userReviews])
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell align="right">WEEK ENDING</TableCell>
-            <TableCell align="right">RETAIL SALES</TableCell>
-            <TableCell align="right">WHOLE SALES</TableCell>
-            <TableCell align="right">UNITS SOLD</TableCell>
-            <TableCell align="right">RETAILER MARGIN</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {sales?.map((sale: any) => (
-            <TableRow
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell align="right">{sale.weekEnding}</TableCell>
-              <TableCell align="right">{formatDollarAmount(sale.retailSales)}</TableCell>
-              <TableCell align="right">{formatDollarAmount(sale.wholesaleSales)}</TableCell>
-              <TableCell align="right">{sale.unitsSold}</TableCell>
-              <TableCell align="right">{formatDollarAmount(sale.retailerMargin)}</TableCell>
+    <div className='table'>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell align="center">WEEK ENDING</TableCell>
+              <TableCell align="center">RETAIL SALES</TableCell>
+              <TableCell align="center">WHOLE SALES</TableCell>
+              <TableCell align="center">UNITS SOLD</TableCell>
+              <TableCell align="center">RETAILER MARGIN</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {sales?.map((sale: any) => (
+              <TableRow
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell align="center">{sale.weekEnding}</TableCell>
+                <TableCell align="center">{formatDollarAmount(sale.retailSales)}</TableCell>
+                <TableCell align="center">{formatDollarAmount(sale.wholesaleSales)}</TableCell>
+                <TableCell align="center">{sale.unitsSold}</TableCell>
+                <TableCell align="center">{formatDollarAmount(sale.retailerMargin)}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 }

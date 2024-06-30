@@ -1,14 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import MetricsTable from './components/MetricsTable.ts';
+import NavBar from './components/NavBar';
+import { ProductTab } from './components/ProductTab';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <MetricsTable/>
-      </header>
+      <NavBar />
+      <div className='container'>
+        <div className='ProductTab'>
+          <ProductTab />
+        </div>
+        <div className='MetricsTable'>
+          <MetricsTable />
+        </div>
+      </div>
     </div>
   );
 }
