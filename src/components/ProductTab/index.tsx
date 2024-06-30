@@ -9,6 +9,8 @@ export function ProductTab() {
     const [tags, setTags] = useState<string[]>();
 
     useEffect(() => {
+        /*I figured that stubbing an api call here would be 
+        essentially the same as importing it, if there is an endpoint for this i'd love to add that functionality in!*/
         setTitle(userReviews.title)
         setSubtitle(userReviews.subtitle)
         setTags(userReviews.tags)
@@ -16,10 +18,8 @@ export function ProductTab() {
 
     return (
         <div className='ProductTab'>
-            <div>
-
             <img src={sharkNinja} />
-            <h4>{title}</h4>
+            <h2>{title}</h2>
             <span>{subtitle}</span>
             <br />
             <div className={'tagContainer'}>
@@ -29,8 +29,6 @@ export function ProductTab() {
                     </div>
                 ))}
             </div>
-            </div>
-
         </div>
     )
 }

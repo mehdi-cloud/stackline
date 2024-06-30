@@ -17,3 +17,9 @@ export interface sale {
     unitsSold: number,
     retailerMargin: number
 }
+
+export function formatDate(date:string) {
+    const [year, month, day] = date.split('-');
+    const formattedDate = `${month}-${day}-${year.slice(-2)}`;
+    return formattedDate;
+}

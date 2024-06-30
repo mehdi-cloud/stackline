@@ -7,7 +7,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { userReviews } from '../../userReviews';
 import { useEffect, useState } from 'react';
-import { formatDollarAmount, sale } from './util';
+import { formatDate, formatDollarAmount, sale } from './util';
 import './MetricsTable.css'
 
 export default function MetricsTable() {
@@ -31,11 +31,11 @@ export default function MetricsTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {sales?.map((sale: any) => (
+            {sales?.map((sale: sale) => (
               <TableRow
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell align="center">{sale.weekEnding}</TableCell>
+                <TableCell align="center">{formatDate(sale.weekEnding)}</TableCell>
                 <TableCell align="center">{formatDollarAmount(sale.retailSales)}</TableCell>
                 <TableCell align="center">{formatDollarAmount(sale.wholesaleSales)}</TableCell>
                 <TableCell align="center">{sale.unitsSold}</TableCell>
