@@ -5,12 +5,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { userReviews } from '../../userReviews';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { formatDate, formatDollarAmount, sale } from './util';
 import './MetricsTable.css'
+import { UserContext } from '../../App';
 
 export default function MetricsTable() {
+  const userReviews = useContext(UserContext);
   const [sales, setSales] = useState<sale[]>();
 
   useEffect(() => {
